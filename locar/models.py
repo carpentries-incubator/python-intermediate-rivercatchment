@@ -10,6 +10,63 @@ and each column represents a single day across all patients.
 import numpy as np
 import pandas as pd
 
+
+class Instrument:
+    """An Instrument taking Measurements"""
+    def __init__(self, name, description):
+        self.name = name
+        self.description = description
+        self.observations = pd.DataFrame(columns=['Value'], index=pd.to_datetime([]))
+        
+    def add_observation(self, value, date):
+        self.observations[pd.to_datetime(date)] = value
+    
+    def __str__(self):
+        return self.name
+        
+    @property
+    def last_observation(self):
+        return self.observations.iloc[-1]
+
+class Location:
+   """A Location, with Geographic Information"""
+   def __init__(self, name, address):
+       self.name = name
+       self.address = address
+       
+   def __str__(self):
+       return self.name
+
+class Site(Location):
+    """A Measurement Site"""
+    def __init__(self, name, address):
+        super().__init__(name, address)
+        self.instruments = []
+       
+    def add_instrument(self, new_instrument):
+        for instrument in self.instruments:
+            if instrument.name == new_instrument.name:
+                return
+        self.instruments.append(new_instrument)
+    
+    def describe_instruments(self):
+        for instrument in self.instruments:
+            print(f'Instrument: {instrument.name}; description: {instrument.description}')
+
+class WaterShed(Location):
+    """A single water shed, containing multiple measurement sites"""
+    def __init__(self, name, address):
+        super().__init__(name, address)
+        self.sites = []
+        
+    def add_site(self, new_site):
+        for site in self.sites:
+            if site.name == new_site.name:
+                return
+        self.sites.append(new_site)
+
+
+
 def read_variable_from_csv(filename,variable,index="Date",sites="Site"):
     """Reads a named variable from a CSV file, and returns a
     pandas dataframe containing that variable. The CSV file must contain
