@@ -28,14 +28,16 @@ class Instrument:
     def last_observation(self):
         return self.observations.iloc[-1]
 
+
 class Location:
-   """A Location, with Geographic Information"""
-   def __init__(self, name, address):
-       self.name = name
-       self.address = address
+    """A Location, with Geographic Information"""
+    def __init__(self, name, address):
+        self.name = name
+        self.address = address
        
-   def __str__(self):
-       return self.name
+    def __str__(self):
+        return self.name
+
 
 class Site(Location):
     """A Measurement Site"""
@@ -53,6 +55,7 @@ class Site(Location):
         for instrument in self.instruments:
             print(f'Instrument: {instrument.name}; description: {instrument.description}')
 
+
 class WaterShed(Location):
     """A single water shed, containing multiple measurement sites"""
     def __init__(self, name, address):
@@ -66,8 +69,7 @@ class WaterShed(Location):
         self.sites.append(new_site)
 
 
-
-def read_variable_from_csv(filename,variable,index="Date",sites="Site"):
+def read_variable_from_csv(filename, variable, index="Date", sites="Site"):
     """Reads a named variable from a CSV file, and returns a
     pandas dataframe containing that variable. The CSV file must contain
     a column of dates, a column of site ID's, and (one or more) columns
@@ -81,7 +83,7 @@ def read_variable_from_csv(filename,variable,index="Date",sites="Site"):
              Columns will be the individual sites
     """
     with open(filename) as f:
-        dataset = pd.read_csv(f,usecols=[index, sites, variable])
+        dataset = pd.read_csv(f, usecols=[index, sites, variable])
 
     dataset = dataset.rename({index: 'OldDate'}, axis='columns')
     dataset[index] = [pd.to_datetime(x) for x in dataset['OldDate']]
@@ -95,6 +97,7 @@ def read_variable_from_csv(filename,variable,index="Date",sites="Site"):
     newdataset = newdataset.sort_index()
 
     return newdataset
+
 
 def load_csv(filename):
     """Load a Numpy array from a CSV
