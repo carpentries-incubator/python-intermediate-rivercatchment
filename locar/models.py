@@ -107,6 +107,11 @@ def load_csv(filename):
     return np.loadtxt(fname=filename, delimiter=',')
 
 
+def daily_total(data):
+    """Calculate the daily total of a 2d data array.
+    Index must be np.datetime64 compatible format."""
+    return data.groupby(data.index.date).sum()
+
 def daily_mean(data):
     """Calculate the daily mean of a 2d data array.
     Index must be np.datetime64 compatible format."""
