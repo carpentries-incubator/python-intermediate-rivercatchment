@@ -86,7 +86,7 @@ def read_variable_from_csv(filename, variable, index="Date", sites="Site"):
         dataset = pd.read_csv(f, usecols=[index, sites, variable])
 
     dataset = dataset.rename({index: 'OldDate'}, axis='columns')
-    dataset[index] = [pd.to_datetime(x) for x in dataset['OldDate']]
+    dataset[index] = [pd.to_datetime(x,dayfirst=True) for x in dataset['OldDate']]
     dataset = dataset.drop('OldDate', axis='columns')
 
     newdataset = pd.DataFrame(index=dataset[index].unique())
