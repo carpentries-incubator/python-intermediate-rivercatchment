@@ -3,7 +3,7 @@
 
 import argparse
 
-from locar import models, views
+from catchment import models, views
 
 
 def main(args):
