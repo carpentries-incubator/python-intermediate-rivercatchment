@@ -12,7 +12,3 @@
 *.pyc
 *.egg-info
 .pytest_cache
-
-# pip
-venv
-.venv
