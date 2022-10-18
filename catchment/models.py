@@ -7,7 +7,6 @@ data for a single measurement site, and each row represents a single measurement
 time across all sites.
 """
 
-import numpy as np
 import pandas as pd
 
 def read_variable_from_csv(filename):
@@ -20,8 +19,7 @@ def read_variable_from_csv(filename):
     :return: 2D array of given variable. Index will be dates,
              Columns will be the individual sites
     """
-    with open(filename) as f:
-        dataset = pd.read_csv(f, usecols=['Date', 'Site', 'Rainfall (mm)'])
+    dataset = pd.read_csv(filename, usecols=['Date', 'Site', 'Rainfall (mm)'])
 
     dataset = dataset.rename({'Date':'OldDate'}, axis='columns')
     dataset['Date'] = [pd.to_datetime(x,dayfirst=True) for x in dataset['OldDate']]
