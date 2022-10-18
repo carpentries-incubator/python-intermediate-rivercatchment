@@ -1,10 +1,10 @@
-"""Module containing models representing patients and their data.
+"""Module containing models representing catchment data.
 
 The Model layer is responsible for the 'business logic' part of the software.
 
-Patients' data is held in an inflammation table (2D array) where each row contains 
-inflammation data for a single patient taken over a number of days 
-and each column represents a single day across all patients.
+Catchment data is held in a Pandas dataframe (2D array) where each column contains
+data for a single measurement site, and each row represents a single measurement
+time across all sites.
 """
 
 import numpy as np
