@@ -1,0 +1,47 @@
+Site Code,Site Name,Easting,Northing,LCWQ ,LCWQ Cont,RNWQ,RNGA,AWST,Latitude,Longitude
+FP01,Bere Stream at Snatford Bridge,385575,92975,x,x,,,,50.736206,-2.205775
+FP02,Bovington Stream at Blindmans Wood,384175,87800,x,x,,,,50.689632,-2.225391
+FP04,CEH Winfrith,384175,87800,,,x,,x,50.689632,-2.225391
+FP06,Devils Brook at Dewlish village,377800,98500,x,x,,,,50.785642,-2.316285
+FP11,Frome at East Stoke,386725,86850,x,x,,,,50.681153,-2.189257
+FP12,Frome at Loudsmill,370850,90475,x,x,,,,50.713169,-2.414234
+FP13,Higher Came Farm,369275,87075,,,x,x,,50.682513,-2.436258
+FP15,Frome at Chilfrome,359050,99125,x,x,,,,50.790237,-2.582322
+FP21,Piddle at Baggs Mill,391325,87600,x,x,,,,50.687986,-2.124167
+FP22,Piddle at Briantspuddle,382125,93450,x,x,,,,50.74038,-2.254687
+FP23,Piddle at Little Puddle,371850,96450,x,x,,,,50.766948,-2.40053
+FP26,Sydling Water at Sydling St. Nicholas,363225,99900,x,x,,,,50.797487,-2.523172
+FP28,Telegraph Hill,364675,104875,,,,,x,50.842314,-2.50308
+FP31,Hooke at Maiden Newton,359475,97600,x,x,,,,50.776554,-2.576125
+FP35,Lower Wraxall Farm,357200,101100,,,x,x,,50.807863,-2.608797
+PL06,Warren Farm,435675,181500,,,x,,x,51.531287,-1.4871
+PL09,Lambourn at East Shefford ,438950,174550,x,x,,,,51.468584,-1.440655
+PL11,Frilsham Meadow,453825,173900,,,x,,x,51.461523,-1.226626
+PL14,Grimsbury Wood (Hermitage),451500,171800,,,,x,,51.442858,-1.260395
+PL15,Lambourn at Shaw ,447000,168200,x,x,,,,51.410881,-1.325613
+PL16,Highfield Farm,453925,170300,,,,x,,51.429147,-1.225735
+PL17,Pang at Bucklebury,455300,171000,x,x,,,,51.435308,-1.20585
+PL18,Pang at Frilsham (Parsonage),453750,173000,x,x,,,,51.453439,-1.227842
+PL19,Pang at Tidmarsh Mill ,463600,174775,x,x,,,,51.468378,-1.085784
+PL20,Pang at below Blue Pool ,458675,171850,x,x,,,,51.442612,-1.157162
+PL29,West Ilsley,448450,183625,,,,x,,51.549443,-1.302655
+TE03,Coal Brook at Market Drayton,369300,334100,x,x,,,,52.903453,-2.457871
+TE05,Tern at Ternhill,362800,331500,x,x,,,,52.879669,-2.554205
+TE09,Tern at Eaton on Tern,364900,323200,x,x,,,,52.805202,-2.522106
+TE10,Bowling Green,362500,325500,,,,x,x,52.825715,-2.55797
+TE11,Halshaw Grange,363400,329100,,,x,,x,52.858137,-2.54502
+TE16,Tern at Norton-in-Hales,370700,338500,x,x,,,,52.943083,-2.437456
+TE17,Oakley Folly,371300,336500,,,x,,x,52.925137,-2.42835
+TE20,Potford Brook at Sandyford Bridge,363400,322200,x,x,,,,52.796113,-2.544244
+TE22,Bailey Brook at Ternhill,362800,331500,x,x,,,,52.879669,-2.554205
+,,,,,,,,,,
+,,,,,,,,,,
+Notes,,,,,,,,,,
+,,,,,,,,,,
+"If an 'x' appears in a cell, then data exist for that site for the instrument type described below",,,,,,,,,,
+,,,,,,,,,,
+LCWQ,LOCAR water quality sampling site,,,,,,,,,
+LCWQ Cont,LOCAR water quality sampling site for continuously monitered determinands,,,,,,,,,
+RNWQ,Rainwater collector for water quality samples,,,,,,,,,
+RNGA,Rain Gauge,,,,,,,,,
+AWST,Automatic Weather Station,,,,,,,,,
