@@ -4,7 +4,7 @@ The data included here are taken from the [LOCAR](https://catalogue.ceh.ac.uk/do
 
 The full datasets are available to download from [EIDC](https://www.eidc.ac.uk/), following the DOI's given in the references below.
 
-The river catchment shapefiles are taken from [DEFRA Catchment Data](https://environment.data.gov.uk/catchment-planning). And are also covered the OGL.
+The river catchment shapefiles are taken from [DEFRA Catchment Data](https://environment.data.gov.uk/catchment-planning). They are also covered by the OGL.
 
 Leach, D.; Henville, P.; Wyatt, R.; Hewitt, E.; Morrissey, I.; Weller, J.; Tindall, C. I.; Bachiller-Jareno, N. (2015). Continuous measurements of rainfall (2002-2007) LOCAR. NERC Environmental Information Data Centre. (Dataset). https://doi.org/10.5285/3ab4545b-2453-4bdf-9b48-552748632cdd
 
