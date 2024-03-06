@@ -20,11 +20,12 @@ def analyse_data(data_dir):
         raise ValueError('No CSV files found in the data directory')
     data = map(models.read_variable_from_csv, data_file_paths)
 
-
-    means_by_day = map(models.daily_mean, data)
-    means_by_day_matrix = pd.concat(means_by_day, axis=1)
-
-    daily_standard_deviation = pd.DataFrame(means_by_day_matrix.std(axis=1), columns=['std'])
+    daily_std_list = []
+    for dataset in data:
+        daily_std = dataset.groupby(dataset.index.date).std()
+        daily_std_list.append(daily_std)
+    
+    daily_standard_deviation = pd.concat(daily_std_list)
 
     graph_data = {
         'daily standard deviation': daily_standard_deviation
