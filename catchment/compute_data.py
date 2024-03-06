@@ -22,7 +22,7 @@ def analyse_data(data_dir):
 
 
     means_by_day = map(models.daily_mean, data)
-    means_by_day_matrix = pd.concat(means_by_day)
+    means_by_day_matrix = pd.concat(means_by_day, axis=1)
 
     daily_standard_deviation = pd.DataFrame(means_by_day_matrix.std(axis=1), columns=['std'])
 
