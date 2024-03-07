@@ -1,0 +1,98 @@
+[
+    {
+        "Site": "FP35",
+        "Site Name": "Lower Wraxall Farm",
+        "Date": "01/12/2008 23:00",
+        "Rainfall (mm)": 0.0
+    },
+    {
+        "Site": "FP35",
+        "Site Name": "Lower Wraxall Farm",
+        "Date": "01/12/2008 23:15",
+        "Rainfall (mm)": 0.0
+    },
+    {
+        "Site": "FP35",
+        "Site Name": "Lower Wraxall Farm",
+        "Date": "01/12/2008 23:30",
+        "Rainfall (mm)": 0.0
+    },
+    {
+        "Site": "FP35",
+        "Site Name": "Lower Wraxall Farm",
+        "Date": "01/12/2008 23:45",
+        "Rainfall (mm)": 0.0
+    },
+    {
+        "Site": "FP35",
+        "Site Name": "Lower Wraxall Farm",
+        "Date": "02/12/2008 00:00",
+        "Rainfall (mm)": 0.2
+    },
+    {
+        "Site": "FP35",
+        "Site Name": "Lower Wraxall Farm",
+        "Date": "02/12/2008 00:15",
+        "Rainfall (mm)": 0.0
+    },
+    {
+        "Site": "FP35",
+        "Site Name": "Lower Wraxall Farm",
+        "Date": "02/12/2008 00:30",
+        "Rainfall (mm)": 0.0
+    },
+    {
+        "Site": "FP35",
+        "Site Name": "Lower Wraxall Farm",
+        "Date": "02/12/2008 00:45",
+        "Rainfall (mm)": 0.2
+    },
+    {
+        "Site": "PL16",
+        "Site Name": "Highfield Farm",
+        "Date": "01/12/2008 23:00",
+        "Rainfall (mm)": 0.4
+    },
+    {
+        "Site": "PL16",
+        "Site Name": "Highfield Farm",
+        "Date": "01/12/2008 23:15",
+        "Rainfall (mm)": 0.4
+    },
+    {
+        "Site": "PL16",
+        "Site Name": "Highfield Farm",
+        "Date": "01/12/2008 23:30",
+        "Rainfall (mm)": 0.4
+    },
+    {
+        "Site": "PL16",
+        "Site Name": "Highfield Farm",
+        "Date": "01/12/2008 23:45",
+        "Rainfall (mm)": 0.6
+    },
+    {
+        "Site": "PL16",
+        "Site Name": "Highfield Farm",
+        "Date": "02/12/2008 00:00",
+        "Rainfall (mm)": 0.2
+    },
+    {
+        "Site": "PL16",
+        "Site Name": "Highfield Farm",
+        "Date": "02/12/2008 00:15",
+        "Rainfall (mm)": 0.4
+    },
+    {
+        "Site": "PL16",
+        "Site Name": "Highfield Farm",
+        "Date": "02/12/2008 00:30",
+        "Rainfall (mm)": 0.8
+    },
+    {
+        "Site": "PL16",
+        "Site Name": "Highfield Farm",
+        "Date": "02/12/2008 00:45",
+        "Rainfall (mm)": 0.6
+    }
+]
