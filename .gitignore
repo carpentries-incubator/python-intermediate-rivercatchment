@@ -12,3 +12,10 @@
 *.pyc
 *.egg-info
 .pytest_cache
+
+# files
+course_notes.txt
+
+# Virtual environment
+venv/
+.venv
