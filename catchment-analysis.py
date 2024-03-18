@@ -13,17 +13,21 @@ def main(args):
     - selecting the necessary models and views for the current task
     - passing data between models and views
     """
-    InFiles = args.infiles
+    infiles = args.infiles
     if not isinstance(InFiles, list):
         InFiles = [args.infiles]
-    
     
     for filename in InFiles:
         measurement_data = models.read_variable_from_csv(filename)
         
-        view_data = {'daily sum': models.daily_total(measurement_data), 'daily average': models.daily_mean(measurement_data), 'daily max': models.daily_max(measurement_data), 'daily min': models.daily_min(measurement_data)}
+        view_data = {
+            'daily sum': models.daily_total(measurement_data), 
+            'daily average': models.daily_mean(measurement_data), 
+            'daily max': models.daily_max(measurement_data), 
+            'daily min': models.daily_min(measurement_data)}
         
         views.visualize(view_data)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
