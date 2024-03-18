@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Software for managing and tracking environmental data from our field project."""
+"""Software for managing and tracking environmental data from our field
+project."""
 
 import argparse
 
