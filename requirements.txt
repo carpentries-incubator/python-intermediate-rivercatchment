@@ -15,6 +15,7 @@ cffi==1.16.0
 charset-normalizer==3.3.2
 comm==0.2.2
 contourpy==1.1.1
+coverage==7.4.4
 cycler==0.12.1
 debugpy==1.8.1
 decorator==5.1.1
@@ -64,7 +65,7 @@ nbformat==5.10.3
 nest-asyncio==1.6.0
 notebook==7.1.2
 notebook_shim==0.2.4
-numpy
+numpy==1.24.4
 overrides==7.7.0
 packaging==24.0
 pandas==2.0.3
@@ -85,6 +86,7 @@ pycparser==2.21
 Pygments==2.17.2
 pyparsing==3.1.2
 pytest==8.1.1
+pytest-cov==4.1.0
 python-dateutil==2.9.0.post0
 python-json-logger==2.0.7
 pytz==2024.1
