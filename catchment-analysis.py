@@ -14,10 +14,10 @@ def main(args):
     - passing data between models and views
     """
     infiles = args.infiles
-    if not isinstance(InFiles, list):
+    if not isinstance(infiles, list):
         InFiles = [args.infiles]
     
-    for filename in InFiles:
+    for filename in infiles:
         measurement_data = models.read_variable_from_csv(filename)
         
         view_data = {
