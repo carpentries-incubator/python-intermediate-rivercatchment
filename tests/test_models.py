@@ -3,6 +3,7 @@
 import pandas as pd
 import pandas.testing as pdt
 import datetime
+import pytest
 
 
 def test_daily_mean_zeros():
@@ -49,3 +50,12 @@ def test_daily_mean_integers():
 
     # Need to use Pandas testing functions to compare arrays
     pdt.assert_frame_equal(daily_mean(test_input), test_result)
+
+
+def test_daily_min_python_list():
+    """Test for attributeError when passing a python list"""
+    from catchment.models import daily_min
+
+    with pytest.raises(AttributeError):
+        error_expected = daily_min([[3, 4, 7], [-3, 0, 5]])
+
