@@ -18,8 +18,22 @@ class CSVDataSource:
         data_file_paths = glob.glob(os.path.join(self.data_dir, "rain_data_2015*.csv"))
         if len(data_file_paths) == 0:
             raise ValueError(
-                f'No files found in the data directory: {self.data_dir}, matching: {self.file_id}')
+                f'No files found in the data directory: {self.data_dir}')
         return list(map(models.read_variable_from_csv, data_file_paths))
+
+
+class JSONDataSource:
+
+    def __init__(self, data_dir: str) -> None:
+        self.data_dir = data_dir
+
+    def load_catchment_data(self):
+        """Load data files into list"""
+        data_file_paths = glob.glob(os.path.join(self.data_dir, "rain_data_2015*.json"))
+        if len(data_file_paths) == 0:
+            raise ValueError(
+                f'No files found in the data directory: {self.data_dir}')
+        return list(map(models.read_variable_from_json, data_file_paths))
 
 
 def analyse_data(data_source: CSVDataSource):

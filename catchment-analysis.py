@@ -3,6 +3,7 @@
 
 import argparse
 import os
+import re
 
 from catchment import models, views, compute_data
 
@@ -19,7 +20,15 @@ def main(args):
         InFiles = [args.infiles]
     
     if args.full_data_analysis:
-        data_source = compute_data.CSVDataSource(os.path.dirname(InFiles[0]))
+        
+        file_format = re.sub(r".*\.(.*)$", "\\1", InFiles[0])
+        
+        if file_format == "csv":
+            data_source = compute_data.CSVDataSource(os.path.dirname(InFiles[0]))
+        elif file_format == "json":
+            data_source = compute_data.JSONDataSource(os.path.dirname(InFiles[0]))  
+        else:
+            raise ValueError(f"Unsupported file format {file_format}")
         
         daily_standard_deviation = compute_data.analyse_data(data_source)
 
