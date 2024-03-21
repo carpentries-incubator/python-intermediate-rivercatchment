@@ -9,7 +9,8 @@ time across all sites.
 
 import pandas as pd
 
-def read_variable_from_csv(filename):
+
+def read_variable_from_csv(filename, measurements="Rainfall (mm)"):
     """Reads a named variable from a CSV file, and returns a
     pandas dataframe containing that variable. The CSV file must contain
     a column of dates, a column of site ID's, and (one or more) columns
@@ -19,7 +20,7 @@ def read_variable_from_csv(filename):
     :return: 2D array of given variable. Index will be dates,
              Columns will be the individual sites
     """
-    dataset = pd.read_csv(filename, usecols=['Date', 'Site', 'Rainfall (mm)'])
+    dataset = pd.read_csv(filename, usecols=['Date', 'Site', measurements])
 
     dataset = dataset.rename({'Date':'OldDate'}, axis='columns')
     dataset['Date'] = [pd.to_datetime(x,dayfirst=True) for x in dataset['OldDate']]
@@ -28,7 +29,7 @@ def read_variable_from_csv(filename):
     newdataset = pd.DataFrame(index=dataset['Date'].unique())
 
     for site in dataset['Site'].unique():
-        newdataset[site] = dataset[dataset['Site'] == site].set_index('Date')["Rainfall (mm)"]
+        newdataset[site] = dataset[dataset['Site'] == site].set_index('Date')[measurements]
 
     newdataset = newdataset.sort_index()
 
