@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Software for managing and tracking environmental data from our field project."""
+"""Software for managing and tracking environmental data from our field
+project."""
 
 import argparse
 import os
@@ -41,21 +42,28 @@ def main(args):
         measurement_data = models.read_variable_from_csv(filename,
                                                          args.measurements)
         
-        view_data = {'daily sum': models.daily_total(measurement_data), 'daily average': models.daily_mean(measurement_data), 'daily max': models.daily_max(measurement_data), 'daily min': models.daily_min(measurement_data)}
+        view_data = {
+            'daily sum': models.daily_total(measurement_data),
+            'daily average': models.daily_mean(measurement_data),
+            'daily max': models.daily_max(measurement_data),
+            'daily min': models.daily_min(measurement_data)
+            }
         
         views.visualize(view_data)
 
 
 def create_argparse():
     parser = argparse.ArgumentParser(
-        description='A basic environmental data management system')
+        description='A basic environmental data management system'
+        )
     
     req_group = parser.add_argument_group("required_arguments")
 
     parser.add_argument(
         'infiles',
-        nargs='+',
-        help='Input CSV(s) containing measurement data')
+        nargs = '+',
+        help = 'Input CSV(s) containing measurement data'
+        )
     
     req_group.add_argument(
         "-m", "--measurements",
