@@ -43,7 +43,7 @@ class XMLDataSource:
 
     def load_catchment_data(self):
         """Load data files into list"""
-        data_file_paths = glob.glob(os.path.join(self.data_dir, "rain_data_2015*.json"))
+        data_file_paths = glob.glob(os.path.join(self.data_dir, "rain_data_2015*.xml"))
         if len(data_file_paths) == 0:
             raise ValueError(
                 f'No files found in the data directory: {self.data_dir}')

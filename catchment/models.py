@@ -37,7 +37,7 @@ def read_variable_from_csv(filename, measurements="Rainfall (mm)"):
     return newdataset
 
   
-def read_variable_from_xml(filename):
+def read_variable_from_xml(filename,  measurements="Rainfall (mm)"):
     """Reads a named variable from a XML file, and returns a
     pandas dataframe containing that variable.
 
