@@ -9,7 +9,7 @@ from catchment import models, views
 
 
 class CSVDataSource:
-
+    """Class for handling CSV data sources"""
     def __init__(self, data_dir: str) -> None:
         self.data_dir = data_dir
 
@@ -23,7 +23,7 @@ class CSVDataSource:
 
 
 class JSONDataSource:
-
+    """Class for handling JSON data sources"""
     def __init__(self, data_dir: str) -> None:
         self.data_dir = data_dir
 
@@ -34,6 +34,20 @@ class JSONDataSource:
             raise ValueError(
                 f'No files found in the data directory: {self.data_dir}')
         return list(map(models.read_variable_from_json, data_file_paths))
+
+
+class XMLDataSource:
+    """Class for handling XML data sources"""
+    def __init__(self, data_dir: str) -> None:
+        self.data_dir = data_dir
+
+    def load_catchment_data(self):
+        """Load data files into list"""
+        data_file_paths = glob.glob(os.path.join(self.data_dir, "rain_data_2015*.json"))
+        if len(data_file_paths) == 0:
+            raise ValueError(
+                f'No files found in the data directory: {self.data_dir}')
+        return list(map(models.read_variable_from_xml, data_file_paths))
 
 
 def analyse_data(data_source: CSVDataSource):
