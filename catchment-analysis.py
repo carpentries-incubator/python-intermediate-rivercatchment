@@ -4,7 +4,6 @@ project."""
 
 import argparse
 import os
-import re
 
 from catchment import models, views, compute_data
 
@@ -22,12 +21,14 @@ def main(args):
     
     if args.full_data_analysis:
         
-        file_format = re.sub(r".*\.(.*)$", "\\1", InFiles[0])
+        _, file_format = os.path.splitext(InFiles[0])
         
         if file_format == "csv":
             data_source = compute_data.CSVDataSource(os.path.dirname(InFiles[0]))
         elif file_format == "json":
-            data_source = compute_data.JSONDataSource(os.path.dirname(InFiles[0]))  
+            data_source = compute_data.JSONDataSource(os.path.dirname(InFiles[0]))
+        elif file_format == "xml":
+            data_source = compute_data.XMLDataSource(os.path.dirname(InFiles[0]))
         else:
             raise ValueError(f"Unsupported file format {file_format}")
         
